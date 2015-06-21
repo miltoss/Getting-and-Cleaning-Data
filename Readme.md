@@ -20,7 +20,8 @@ I import the following metadata into data frames:
 
 * Feature names from _features.txt_ into data frame __features__: 
 I create a vector __FeaturesMeanStd__ with only those features that will be extracted
-according to step 2, namely only means and standard deviations.
+according to rquirement 2, namely only means and standard deviations. I used a regular
+expression to keep only features containing "-mean" or "-std" in their name.
 * Activity names from _activity_labels.txt_:  
 Here I create a factor __f.activities__ for the six activities.
 

@@ -27,7 +27,6 @@ FeaturesMeanStd<- as.vector(features$FeatureName[FeaturesKeep])
 activity_labels <- read.table("./activity_labels.txt")
 names(activity_labels) <- c("ActivityNumber","ActivityName")
 
-activity_labels
 # Create a factor
 f.activities <- factor(activity_labels$ActivityNumber, labels=activity_labels$ActivityName)
 
@@ -41,12 +40,9 @@ names(X_Train) <- features$FeatureName
 ## Keep only the features with mean and std
 X_Train <- X_Train[,FeaturesMeanStd]
 
-
-
 ## Read the subjects in a data frame of one feature
 subject_train <- read.table("./train/subject_train.txt")
 names(subject_train) <- "Subject"
-
 
 ## Read the training labels in a data frame of one feature
 y_train <- read.table("./train/y_train.txt")
