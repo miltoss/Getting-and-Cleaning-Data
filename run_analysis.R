@@ -87,5 +87,5 @@ MyDataset <- rbind(Train,Test)
 melted <- melt(MyDataset, id=c("Subject","Activity"))
 MyDataset2 <- ddply(melted,.(Subject, Activity, variable), summarize, MeanValue=mean(value))
 
-write.table(MyDataset2, "./MyDataset2.csv", sep=',', row.names=FALSE)
+write.table(MyDataset2, "./MyDataset2.txt", sep=' ', row.names=FALSE)
 

@@ -48,6 +48,7 @@ I append __Test__ to __Train__ using rbind to create data frame __MyDataset__ (f
 I first melt __MyDataset__ into __melted__ using columns "Subject", "Activity" as id.
 Then I use the ddply function to get the means for each "Subject", "Activity", "variable"
 where "variable" is any of the features __FeaturesMeanStd__. The final data frame is
-__MyDataset2__ which is then exported as a .csv.
+__MyDataset2__ which is then exported as a _MyDataset2.txt_ with separator the space character.
+This is the file I upload.
 
 
